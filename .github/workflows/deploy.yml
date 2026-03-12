@@ -17,5 +17,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: docker build . -t hariladkani0/hari
-    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}"" | docker login -u hariladkani0 --password-stdin
+    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u hariladkani0 --password-stdin
     - run: docker push hariladkani0/hari:latest
